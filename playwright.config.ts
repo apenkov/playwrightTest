@@ -5,20 +5,20 @@ const WIDTH = 1600;
 const HEIGHT = 900;
 const HEADLESS = false
 
-const config: PlaywrightTestConfig = {
-    use: {
-        screenshot: 'only-on-failure',
-        video: 'retry-with-video'
-    },
-    reporter: [
-        ['line'],
-        ['allure-playwright']
-    ],
-    timeout: 0.5 * 60 * 1000,
-    retries: 2,
-}
-
-export default config
+// const config: PlaywrightTestConfig = {
+//     use: {
+//         screenshot: 'only-on-failure',
+//         video: 'retry-with-video'
+//     },
+//     reporter: [
+//         ['line'],
+//         ['allure-playwright']
+//     ],
+//     timeout: 0.5 * 60 * 1000,
+//     retries: 1,
+// }
+//
+// export default config
 
 export async function setupBrowser(browserType: 'chromium' | 'firefox' | 'webkit', device?: string ): Promise<{page:playwright.Page,browser:playwright.Browser}> {
     let contextParam: object = {};
