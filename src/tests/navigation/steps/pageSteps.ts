@@ -12,7 +12,7 @@ export class PageSteps {
 
     // @allureStepDecorator('open url') почему то не работает декоратор аллюра :(
     openUrl(url: string) {
-        this.page.goto (url)
+        this.page.goto(url,{waitUntil:"networkidle"})
     }
 
     wait(ms: number) {
